@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration - Canadian Return Top Open 2024</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="footer.css"/>
+<link rel="stylesheet" type="text/css" href="register.css"/>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|Oswald">
+<meta name="description" content="Canadian Return Top Open 2024"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="yo-yo, yoyo, yoyos, toronto, yoyoing, canada, ontario, return top, return, top, competition, championship, contest, national, nats, nationals" />
+<meta property="og:title" content="Canadian Return Top Open 2024 - Video submission" />
+<meta property="og:image" content="https://canadanationals.com/crto2024/FBpreview.png" />
+<meta property="og:description" content="Canadian Return Top Open (#CRTO2024) is an online streaming event where return top players from all across Canada and the world will compete by video submission." />
+<meta property="og:type" content="website" />
+
+<script type="text/javascript">
+function getPrice()
+{
+    var divs = document.getElementsByName("division");
+    var total = 0;
+    var total_str = "";
+    
+    var div_str = "Divisions - ";
+
+    divs[0].disabled = false;
+    divs[1].disabled = false;
+    div_str = "Divisions - ";
+    total_str = "$" + total + " CAD";
+
+    if(divs[0].checked && divs[1].checked)
+    {
+        total = 25;
+        total_str = "<span style='text-decoration:line-through; text-decoration-thickness: 2px;'>$30</span> &nbsp;<span style='color:blue;'>$25 CAD</span>";
+        
+        var open_style = document.getElementsByName("open-style");
+        div_str = div_str + "1A, Open (" + open_style[0].value + ")";
+    }
+    else if(divs[0].checked)
+    {
+        total = 15;
+        div_str = div_str + "1A"
+        total_str = "$" + total + " CAD";
+    }
+    
+    else if(divs[1].checked)
+    {
+        total = 15;
+        total_str = "$" + total + " CAD";
+        
+        var open_style = document.getElementsByName("open-style");
+        div_str = div_str + "Open (" + open_style[0].value + ")";        
+    }
+    
+    var item_name = document.getElementsByName("item_name");
+    item_name[0].value = div_str;
+    
+    document.getElementById("amount-display").innerHTML = total_str;
+    
+    var a = document.getElementsByName("amount");
+    a[0].value = total;
+    
+    return total;
+}
+function checkstyle()
+{
+    if(getPrice() <= 0)
+    {
+        alert("Please select at least one division to enter.");
+        return false;
+    }
+
+    var open_div = document.getElementById("open_div");
+    
+    var style = document.getElementsByName("open-style");
+    
+    if(open_div.checked && style[0].value=="INVALID")
+    {
+        alert("Please select a style for your Open division routine.");
+        return false;
+    }
+    
+    return true;
+}
+</script>
+
+</head>
+
+<body onload="getPrice();">
+    <div id="menu">
+        <div id="menu-container">
+            <a href="index.html">About</a>
+            <a href="rules.html">Rules</a>
+            <a id="active" href="register.html">Register</a>
+        </div>
+    </div>
+    
+    <div id="content">
+    
+    <h1>Registration</h1>
+	
+    <p>Please use the following to pay the registration fees and submit your video. If you are entering both 1A and Open
+    divisions, repeat the video submission process separately for each division.</p>
+
+
+
+	<table class="deadline-table">
+	<tr class="headrow"><td>Registration fee</td><td>Deadline for both fee and video</td></tr>
+	<tr><td>$15 CAD per division<br/><span class="footnote">($25 CAD both 1A and Open)</span></td>
+        <td>Sunday February 25<br/>Midnight Pacific time</td></tr>
+	</table>
+    
+    <h1>Step 1: Registration fee</h1>
+    <p>Select the division(s) you'd like to enter. When you click "Register" you will be brought to a PayPal checkout page to send payment.</p>
+    <ul>
+    <li>You can pay as a guest using a credit card without a PayPal account.</li>
+    <li>If this does not work you, please <a href="mailto:canadianyoyoassociation@gmail.com">contact the organizer</a> for alternatives.</li>
+    </ul>
+    <form onsubmit="return checkstyle();" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+    <input type="hidden" name="business" value="wayne.ngan@gmail.com">
+
+    <input type="hidden" name="cmd" value="_xclick">
+    
+    <div class="fees-row">
+    <input type="checkbox" name="division" id="1a_div" onclick="getPrice();"><div class="fees-cell">1A</div> $15 CAD
+    </div>
+    <div class="fees-row">
+    <input type="checkbox" name="division" id="open_div" onclick="getPrice();"><div class="fees-cell">Open&nbsp;
+    <select name="open-style">
+        <option value="INVALID">Style</option>
+        <option value="2A">2A</option>
+        <option value="3A">3A</option>
+        <option value="4A">4A</option>
+        <option value="5A">5A</option>
+    </select>
+    </div>
+    $15 CAD
+    </div>
+    <div class="fees-total">
+    <div class="fees-cell">Total</div>
+    <span id="amount-display">$0 CAD</span>
+    </div>
+
+    <br/>
+    
+    <input type="hidden" name="item_name" value="INVALID REGISTRATION">
+    <input type="hidden" name="amount" value="0">
+    
+    <input type="hidden" name="currency_code" value="CAD">
+
+    <div align="center">
+    <script type="text/javascript">
+    <!--
+        document.write('<input type="submit" class="register_button" value="Register">');
+    //-->
+    </script>
+    <noscript>
+        <div class="register_button" id="disabled">Register</div>
+        <p><span style="font-weight:bold;color:red;">PLEASE ENABLE JAVASCRIPT IN ORDER TO REGISTER.</span></p>
+    </noscript>
+    </div>
+    </form>
+    
+
+
+    <h1>Step 2: Video submission</h1>
+
+    <p>Video submission form will be available soon. For now, remember to read the <a href="rules.html">rules</a> carefully,
+	and if your video is ready make sure to <a href="copyright.html">check your video for copyright claims</a>.</p>
+
+    <h1>Remember to follow CANYA for updates</h1>
+    <p>If there are any changes to this contest, they will be announced on CANYA's website and social media pages. Make sure
+    to bookmark and follow to stay up to date.</p>
+    <ul>
+        <li><a href="http://www.canadayoyo.ca" target="_blank">Website: canadayoyo.ca</a></li>
+        <li><a href="https://www.youtube.com/@canadianyoyoassociation" target="_blank">YouTube: @canadianyoyoassociation</a></li>
+        <li><a href="https://www.instagram.com/canadianyoyoassociation/" target="_blank">Instagram: @canadianyoyoassociation</a></li>
+        <li><a href="https://www.facebook.com/canadianyoyoassociation" target="_blank">Facebook: @canadianyoyoassociation</a></li>
+    </ul>
+    </div>
+    <!--
+    <div id="sponsor-footer">
+    <h1>Sponsors</h1>
+    </div>-->
+
+    <script src="sponsors.js"></script>
+    <script>
+        loadSponsors("sponsor-footer", 0.6);
+    </script>
+    
+</body>
+
+</html>
+
