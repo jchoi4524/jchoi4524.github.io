@@ -47,20 +47,23 @@ function loadOneSponsor(num, elem, scale) {
         case 5:
             showOneSponsor(elem, "https://mk1yoyos.com/", "sponsors/mk1.png", "MK1 yoyos", 150*scale);
             break;
+        case 6:
+            showOneSponsor(elem, "https://onedropyoyos.com/", "sponsors/onedrop.png", "MK1 yoyos", 220*scale);
+            break;
     }
 }
 
-function loadSponsors(id, scale) {
+function loadSponsors(id, scale, per_row = 4) {
     var elem = document.getElementById(id);
     
     loadOneSponsor(0, elem, scale);
     br(elem);
     
-    numSponsors = 5;
+    numSponsors = 6;
     order = genRandArray(numSponsors);
     for (i = 0; i < numSponsors; i++) {
         loadOneSponsor(order[i] + 1, elem, scale);
-        if (((i + 1) % 3) == 0) {
+        if (((i + 1) % per_row) == 0) {
             br(elem);
         }
     }
