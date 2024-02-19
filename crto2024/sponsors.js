@@ -45,10 +45,13 @@ function loadOneSponsor(num, elem, scale) {
             showOneSponsor(elem, "https://www.44emporium.com/", "sponsors/44emporium.png", "44 Emporium", 260*scale);
             break;
         case 5:
-            showOneSponsor(elem, "https://mk1yoyos.com/", "sponsors/mk1.png", "MK1 yoyos", 150*scale);
+            showOneSponsor(elem, "https://mk1yoyos.com/", "sponsors/mk1.png", "MK1 Yoyos", 150*scale);
             break;
         case 6:
-            showOneSponsor(elem, "https://onedropyoyos.com/", "sponsors/onedrop.png", "MK1 yoyos", 220*scale);
+            showOneSponsor(elem, "https://onedropyoyos.com/", "sponsors/onedrop.png", "One Drop Yoyos", 220*scale);
+            break;
+        case 7:
+            showOneSponsor(elem, "https://freshlydirty.com/", "sponsors/FreshlyDirty.png", "Freshly Dirty", 130*scale);
             break;
     }
 }
@@ -59,7 +62,7 @@ function loadSponsors(id, scale, per_row = 4) {
     loadOneSponsor(0, elem, scale);
     br(elem);
     
-    numSponsors = 6;
+    numSponsors = 7;
     order = genRandArray(numSponsors);
     for (i = 0; i < numSponsors; i++) {
         loadOneSponsor(order[i] + 1, elem, scale);
