@@ -101,7 +101,7 @@ function checkstyle()
     
     <h1>Registration</h1>
 	
-    <p>Please use the following forms to register in two steps: 1) Pay registration fees and 2) Upload videos.</p>
+    <p>Registration deadline is now past. Thank you for entering!</p>
 
 	<table class="deadline-table">
 	<tr class="headrow"><td>Registration fee</td><td>Deadline for both fee and video</td></tr>
@@ -109,74 +109,7 @@ function checkstyle()
         <td>Sunday February 25<br/>Midnight Pacific time</td></tr>
 	</table>
     
-    <h1>Step 1: Registration fee</h1>
-    <p>Select the division(s) you'd like to enter. When you click "Register" you will be brought to a PayPal checkout page to send payment.</p>
-    <ul>
-    <li>You can pay as a guest using a credit card without a PayPal account.</li>
-    <li>If this does not work you, please <a href="mailto:canadianyoyoassociation@gmail.com">contact the organizer</a> for alternatives.</li>
-    </ul>
-    <form onsubmit="return checkstyle();" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
-    <input type="hidden" name="business" value="wayne.ngan@gmail.com">
-
-    <input type="hidden" name="cmd" value="_xclick">
-    
-    <div class="fees-row">
-    <input type="checkbox" name="division" id="1a_div" onclick="getPrice();"><div class="fees-cell">1A</div> $15 CAD
-    </div>
-    <div class="fees-row">
-    <input type="checkbox" name="division" id="open_div" onclick="getPrice();"><div class="fees-cell">Open&nbsp;
-    <select name="open-style">
-        <option value="INVALID">Style</option>
-        <option value="2A">2A</option>
-        <option value="3A">3A</option>
-        <option value="4A">4A</option>
-        <option value="5A">5A</option>
-    </select>
-    </div>
-    $15 CAD
-    </div>
-    <div class="fees-total">
-    <div class="fees-cell">Total</div>
-    <span id="amount-display">$0 CAD</span>
-    </div>
-
-    <br/>
-    
-    <input type="hidden" name="item_name" value="INVALID REGISTRATION">
-    <input type="hidden" name="amount" value="0">
-    
-    <input type="hidden" name="currency_code" value="CAD">
-
-    <div align="center">
-    <script type="text/javascript">
-    <!--
-        document.write('<input type="submit" class="register_button" value="Register">');
-    //-->
-    </script>
-    <noscript>
-        <div class="register_button" id="disabled">Register</div>
-        <p><span style="font-weight:bold;color:red;">PLEASE ENABLE JAVASCRIPT IN ORDER TO REGISTER.</span></p>
-    </noscript>
-    </div>
-    </form>
-    
-
-
-    <h1>Step 2: Video submission</h1>
-    
-    <p>In this step you will fill in a form for your personal information, and actually submit your video</p>
-
-    <p>Remember to read the <a href="rules.html">rules</a> carefully, and <a href="copyright.html">check your video for copyright claims</a>.</p>
-
-    <p>If your video is not acceptable,
-    the organizer will contact you by email with an explanation. 
-    You may re-submit any time before the deadline or up to 48 hours after that email, whichever is later.</p>
-
-    <div align="center">
-        <a id="submit-video-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeyi61YCfqdkMfm4sDqVMgGcaZgw4vlzatME7X079gxpAK86A/viewform?usp=sf_link">
-        Submit video</a>
-    </div>
 
     <h1>Remember to follow CANYA for updates</h1>
     <p>If there are any changes to this contest, they will be announced on CANYA's website and social media pages. Make sure
