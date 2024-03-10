@@ -153,15 +153,18 @@ table {
 }
 
 #fb, #sport-ladder-videos , #music-button, #waiver-form-button, #check-button, #submit-video-button {
-    display: inline-block;
-    margin: 2px 0;
-    background-color: #550000;
-    background-image: url('youtube_icon.png');
-    background-repeat: no-repeat;
-    background-position: 14px 14px;
-    color: white;
+	    border: 0;
     padding: 10px 20px 10px 50px;
+    background-color: #550000;
+    color: white;
+    cursor: pointer;
     border-radius: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    background-image: url("check_icon.png");
+    background-repeat: no-repeat;
+    background-position: 14px 12px;
 }
 #music-button {
     background-image: url('music_icon.png');
