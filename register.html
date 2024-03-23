@@ -29,7 +29,7 @@ function getPrice()
 
     if(divs[2].checked) /* international */
     {
-        total = 15;
+        total = 35;
         var int_style = document.getElementsByName("int-style");
         div_str = div_str + "International (" + int_style[0].value + ")";
         total_str = "$" + total + " CAD";
@@ -50,19 +50,19 @@ function getPrice()
     
         if(divs[0].checked && divs[1].checked)
         {
-            total = 30;
+            total = 70;
             
             var open_style = document.getElementsByName("open-style");
             div_str = div_str + "1A, Open (" + open_style[0].value + ")";
         }
         else if(divs[0].checked)
         {
-            total = 15;
+            total = 35;
             div_str = div_str + "1A"
         }
         else if(divs[1].checked)
         {
-            total = 15;
+            total = 35;
             
             var open_style = document.getElementsByName("open-style");
             div_str = div_str + "Open (" + open_style[0].value + ")";        
@@ -130,11 +130,11 @@ function checkstyle()
     <h1>Register</h1>
     <p>Online registration is mandatory for <span class="emphasis">ALL contestants</span> in all divisions.
     Spectators, including friends and family members of contestants, may enter the contest hall for free.</p> 
-	<p>The current registration fees will hold until April 30th. After the date, the fees will increase increase to $30 CAD per division until May 12th, and there will be another increase to $100 CAD if registered until the day before the contest. </p>
+	<p>The current registration fees will hold until April 30th. After the date, the fees will increase increase to $50 CAD per division until May 12th, and there will be another increase to $100 CAD if registered until the day before the contest. </p>
 	<p>Music upload fee will not occur until May 12th. After that, there will be $30 CAD for music upload. </p>
 	<table class="deadline-table">
 	<tr class="headrow"><td>Registration fees</td><td>Deadline</td></tr>
-	<tr><td>$15 CAD per division</td><td>April 30th</td></tr>
+	<tr><td>$35 CAD per division</td><td>April 30th</td></tr>
 	<tr class="blankrow"></tr>
 	<tr class="headrow"><td>Music upload fees</td><td>Deadline</td></tr>
 	<tr><td>$- CAD per division</td><td>April 30th</td></tr>
@@ -155,7 +155,7 @@ function checkstyle()
     <input type="hidden" name="cmd" value="_xclick">
     
     <div class="fees-row">
-    <input type="checkbox" name="division" id="1a_div" onclick="getPrice();"><div class="fees-cell">1A</div> $15 CAD
+    <input type="checkbox" name="division" id="1a_div" onclick="getPrice();"><div class="fees-cell">1A</div> $35 CAD
     </div>
     <div class="fees-row">
     <input type="checkbox" name="division" id="open_div" onclick="getPrice();"><div class="fees-cell">Open&nbsp;&nbsp;
@@ -167,7 +167,7 @@ function checkstyle()
         <option value="5A">5A</option>
     </select>
     </div>
-    $15 CAD
+    $35 CAD
     </div>
     <div class="fees-row" >
     <input type="checkbox" name="division" id="int_div" onclick="getPrice();"><div class="fees-cell">International&nbsp;
@@ -180,7 +180,7 @@ function checkstyle()
         <option value="5A">5A</option>
     </select>
     </div>
-    $15 CAD
+    $35 CAD
     </div>
     <div class="fees-total">
     <div class="fees-cell">Total</div>
